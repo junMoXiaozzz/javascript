@@ -13,6 +13,7 @@ $ ssh-keygen -t rsa -C "youremail@example.com"
 
 fork开源项目 可以自己的账号下克隆一个仓库 ，然后从自己账号下clone本地
 如果你希望bootstrap的官方库能接受你的修改，你就可以在GitHub上发起一个pull request。当然，对方是否接受你的pull request就不一定了。
-
-git push  推项目
-git pull  拉项目
+git add 添加到暂存区
+git commit 提交到git仓库
+git push  推项目到远程仓库
+git pull  远程仓库拉项目
