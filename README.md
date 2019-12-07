@@ -6,6 +6,8 @@
 #$ git config --global user.name "Your Name"
 #$ git config --global user.email "email@example.com"
 
+#查看ssh公钥 cat id_rsa.pub 查看用户名邮箱 git config user.name || email
+
 #第1步：创建SSH Key。在用户主目录下(C:\Users\zhaokai)，看看有没有.ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
 #$ ssh-keygen -t rsa -C "youremail@example.com"
 #第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：
