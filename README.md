@@ -1,7 +1,7 @@
 # javascript
 #对自己日常技术积累总结
 
-#之前不会git  git基本使用
+#git基本使用
 #git init 本地初始化仓库
 #$ git config --global user.name "Your Name"
 #$ git config --global user.email "email@example.com"
