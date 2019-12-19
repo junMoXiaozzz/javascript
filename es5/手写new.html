@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //  var a = new Person()
+
+         function myNew(fn,...arg){
+            //  new 做了四部
+            /**
+             * 1.创建一个对象
+             * 2.替换this
+            */
+             var obj = {};
+             fn.call(obj,...arg)
+             obj.__proto__ = fn.prototype;
+             obj.__proto__ .constructor = fn;
+             return obj
+         }
+         function Person(name,age){
+             this.name = name;
+             this.age = age;
+             this.say = function(){
+                 console.log(this.name)
+             }
+         }
+         Person.prototype.user = function(){
+            console.log(`hi 我是 ${this.name}，今年我${this.age}岁了`);
+         }
+         var xiaomin = myNew(Person,'xiaomin',23)
+         xiaomin.user()
+         xiaomin.say()
+    </script>
+</body>
+
+</html>

@@ -47,7 +47,7 @@ export default {
   mounted() {},
   methods: {
     submit(){
-      this.$emit('submit',this.$refs.login.form);
+      this.$emit('submit',this.$refs[this.status].form);
     }
   }
 };

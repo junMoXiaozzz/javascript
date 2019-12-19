@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function demo(a, b, c) {
+            console.log(this.name)
+            console.log(a, b, c)
+        }
+        var obj = {
+            name: 12
+        }
+        // var fn = demo.bind(obj)
+        // fn()
+        // 1.函数bind 会返回一个新的函数
+        // 2. bind 中可以传递this和参数
+
+        Function.prototype.MYbind = function (context) {
+            var self = this;
+            //  context 代表上下文，this代表函数
+            return function (...arg) {
+                return self.call(context, ...arg)
+            }
+        }
+
+        var fn2 = demo.MYbind(obj)
+        fn2(1, 2, 3)
+    </script>
+</body>
+
+</html>

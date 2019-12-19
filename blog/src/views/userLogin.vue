@@ -27,9 +27,10 @@ export default {
   },
   mounted() {},
   methods: {
-    submit(data) {
-        this.loading = true;
-        console.log(data)
+     submit(data) {
+       this.loading = true;
+       let res =  this.$ajax.post('/register',data)
+       this.loading = false
     }
   }
 };

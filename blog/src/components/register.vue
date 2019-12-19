@@ -8,7 +8,7 @@
       :rules="rules"
       size="small"
     >
-      <!-- 考虑到注册组件一些验证和登录一样，如果重写的话很麻烦，是否可以extends -->
+      <!-- 考虑到注册组件一些验证和登录一样，如果重写的话很麻烦，   是否可以extends -->
       <!-- 时间不够没搞完。。。。。 -->
       <el-form-item label="用户名:" prop="name">
         <el-input v-model.trim="form.name"></el-input>
